@@ -1,0 +1,259 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10-Feb-2018, 19:57:17
+    Author     : anne-marijenap
+*/
+
+/*Mobile screen settings*/
+
+* {
+    box-sizing: border-box;  
+    -webkit-box-sizing: border-box;
+}
+
+[class*='item'] { 
+    padding: 2vw;
+    background-color: #006666;    
+    line-height: 1.5;
+    font-family: sans-serif;
+    color: white;
+    font-size: 3.5vw;
+}
+
+.btn {
+    width: 100%;
+    height: auto;
+}
+
+/*email link*/
+a:link {
+    color: white;   
+}
+a:visited {
+    color: #85e0e0;
+}
+a:hover {
+    color: #85e0e0;
+}
+a:active {
+    color: white; 
+}
+
+/* footer styling */
+.footer{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 1vw;
+    background-color: #009999;
+    font-family: sans-serif;
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+}
+
+   /*popup*/ 
+.popup {
+    display: none;
+    position: fixed;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.4);
+}
+
+.inhoud {
+    background-color: #fefefe;
+    margin: 10% auto  auto auto;
+    padding: 3vw;
+    width: 80%;
+    height: 48vw; 
+}
+    
+.bigpic {
+        width: 70%;
+        height: auto; 
+        float: left; 
+        display:inline; 
+}
+
+.inhoudtekst {
+    width: 30%;
+    padding-left: 2.5vw;
+    float: right;
+    font-family: sans-serif;
+    color: #006666;
+    font-size: 2.2vw;
+    line-height: 1.8;
+}
+    
+p {
+    font-weight: bold;
+}
+    
+/*naming grid items*/    
+.item1 {grid-area: text1}
+.item2 {grid-area: text2}
+.item3 {grid-area: text3}
+.item4 {grid-area: text4}
+.item5 {grid-area: text5}
+.item6 {grid-area: text6}
+.item7 {grid-area: text7}
+.item8 {grid-area: text8}
+.item9 {grid-area: text9}
+.item10 {grid-area: text10}
+.item11 {grid-area: text11}
+.item12 {grid-area: text12}
+
+.pic1 {grid-area: pic1}
+.pic2 {grid-area: pic2}
+.pic3 {grid-area: pic3}
+.pic4 {grid-area: pic4}
+.pic5 {grid-area: pic5}
+.pic6 {grid-area: pic6}
+.pic7 {grid-area: pic7}
+.pic8 {grid-area: pic8}
+.pic9 {grid-area: pic9}
+.pic10 {grid-area: pic10}
+.pic11 {grid-area: pic11}
+.pic12 {grid-area: pic12}
+
+.test{  
+    margin: 3vw 2% 7vw 2%;
+    width: 95%;
+    display: grid;
+    grid-row-gap: 2vw;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-areas:         
+                    'pic1 text1'
+                    'pic2 text2'
+                    'pic3 text3'
+                    'pic4 text4'
+                    'pic5 text5'
+                    'pic6 text6'
+                    'pic7 text7'
+                    'pic8 text8'
+                    'pic9 text9'
+                    'pic10 text10'
+                    'pic11 text11'
+                    'pic12 text12';
+    align-items: stretch;                     
+}
+    
+/* screens between 900 and 1200px*/ 
+    @media screen and (min-width: 800px) and (max-width: 1100px){
+            
+        .test{  
+            margin: auto 3% 5vw 3%; 
+            width: 90%;
+            padding-top: 1%;
+            display: grid;
+            grid-row-gap: 0;
+            grid-column-gap: 2vw;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 17% 8% 17% 8% 17% 8% 17% 8%;
+            grid-template-areas:         
+                        'pic1 pic2 pic3'
+                        'text1 text2 text3'
+                        'pic4 pic5 pic6'
+                        'text4 text5 text6'
+                        'pic7 pic8 pic9'
+                        'text7 text8 text9'
+                        'pic10 pic11 pic12'
+                        'text10 text11 text12';
+        }    
+            
+        [class*='item'] { 
+            padding: 2vw;
+            background-color: #006666;    
+            line-height: 1.3;
+            font-family: sans-serif;
+            color: white;
+            font-size: 2vw;
+            margin-bottom: 2vw;
+        }
+            
+        .bigpic {
+            width: 60%;
+            height: auto;
+        }
+            
+        .inhoud {        
+            margin: 6% auto  auto auto;
+            padding: 2vw;
+            width: 80%;
+            height: 40vw; 
+        }
+        
+        .inhoudtekst {
+            width: 38%;
+            padding-left: 1vw;
+        }
+            
+        .footer {
+            font-size: 2.5vw;
+        }
+    }
+    
+/* screens greater than 1100px*/         
+    @media screen and (min-width: 1100px){
+            
+            .test {  
+                margin: auto 2% 4vw 2%;
+                width: 90%;
+                padding-top: 2%;
+                display: grid;
+                grid-row-gap: 0;
+                grid-column-gap: 2vw;
+                grid-template-columns: 25% 25% 25% 25%;
+                grid-template-rows: 26% 7% 26% 7% 26% 7%;
+                grid-template-areas:         
+                        'pic1 pic2 pic3 pic4'
+                        'text1 text2 text3 text4'
+                        'pic5 pic6 pic7 pic8'
+                        'text5 text6 text7 text8'
+                        'pic9 pic10 pic11 pic12'
+                        'text9 text10 text11 text12';
+            }
+            
+            [class*='item'] { 
+                padding: 1vw;        
+                line-height: 1.3;
+                font-size: 1.3vw;
+                margin-bottom: 2vw;
+            }
+                        
+            .bigpic {
+                width: 50%;
+                height: auto;
+            }
+            .inhoud {
+                
+                margin: 4% auto  auto auto;
+                padding: 2vw;
+                width: 80%;
+                height: 35vw; 
+            }
+            
+            .inhoudtekst {
+                width: 48%;
+                padding-left: 1vw;
+            }
+      
+            
+            .footer{
+                font-size: 2vw;
+            }
+    }
+       
+    
+    
+
+ 
